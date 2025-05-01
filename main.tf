@@ -6,9 +6,15 @@ terraform {
       version  = "3.43.0"
     }
   }
-  
-}
+cloud { 
+    
+    organization = "terraform-test-lab-34" 
 
+    workspaces { 
+      name = "TerraformCI" 
+  }
+}
+}
 provider "azurerm" {
   features {}
   skip_provider_registration = true
